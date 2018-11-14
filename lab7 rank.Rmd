@@ -8,9 +8,9 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-This is isabelle
+Hi Im isabelle and I created this document
 
-
+Creator (Isabelle) 
 ```{r}
 library(tidyverse)
 
@@ -25,7 +25,7 @@ kermit_hist
 
 ```
 
-Creator (Eva): doing some rank-based tests
+Colaborator (Eva): doing some rank-based tests
 
 ```{r}
 #Is there a significant difference in pre-talk kermit scores for males and females?
@@ -38,6 +38,25 @@ mwu_kermit <- kermit %>%
 mwu_kermit
 
 ```
+
+
+Is there a significant differenc in Kermit ranks for pre-talk and post talk scores (ignoring all other variables)?
+
+null 
+
+
+```{r}
+wsr_kermit<- wilcox.test(kermit$Score.pre, kermit$Score.post, paried= TRUE)
+wsr_kermit
+
+# there is no significant differece in Kermit rankings before and after his talk (summary....)
+
+```
+
+
+
+
+
 
 
 
